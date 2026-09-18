@@ -1,0 +1,16 @@
+{
+  "name": "lumiere-plugins",
+  "owner": {
+    "name": "Latitude"
+  },
+  "plugins": [
+    {
+      "name": "lumiere",
+      "source": "./",
+      "description": "Video and audience research with Lumiere."
+    }
+  ],
+  "metadata": {
+    "description": "Lumiere video and audience research tools for Claude."
+  }
+}

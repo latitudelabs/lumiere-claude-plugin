@@ -1,0 +1,15 @@
+{
+  "version": "1.0.0",
+  "source_commit": "8d7e6b04e64a3a4a5b5428483f723a58e1b621e4",
+  "files": {
+    ".claude-plugin/marketplace.json": "0eecf90342bd569ef06a4292239a787f77c96a964a765d9fbb3413def769b7c2",
+    ".claude-plugin/plugin.json": "b0f5423585f1c4d7b36f6ff9aa4f4752a80708410f01847b6ea8d03d15ce0f64",
+    ".github/workflows/release.yml": "bf1b12372d88a997870721b055024f19b9778845fbb8221ca7abede4ab14db5b",
+    ".mcp.json": "9d96493788e29cce61efe68daa8d731ca45141bd2218ca293d5d6b33098c12c8",
+    "CHANGELOG.md": "bf2f987be0e6203cdf7b871bc63c8f8608a7ca33eeb2979d5702bcb307cc8e28",
+    "LICENSE": "39ad62178748ba6e39c037441de69f396f0c73804768a9768feb3742b9b04ac3",
+    "README.md": "e2a2a1a2864cbfb6723b0d1b201331824f9a0b39f8a89c22405730d718b21237",
+    "scripts/validate-plugin.py": "7661adaf316fdfff664755c4cdf9fc1985a28d41ad6c6a25054594ae7ccc2dcf",
+    "skills/lumiere-research/SKILL.md": "daea5977242249c7abcb13ad10eae4b005fd3ad6fa30cfbebb6a8ea71e62635a"
+  }
+}
