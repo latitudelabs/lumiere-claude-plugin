@@ -1,8 +1,11 @@
 {
   "name": "lumiere",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Find videos, explore audience feedback, and compare results with evidence from your Lumiere workspace.",
-  "author": { "name": "Latitude", "url": "https://lumiere.ai" },
+  "author": {
+    "name": "Latitude",
+    "url": "https://lumiere.ai"
+  },
   "homepage": "https://lumiere.ai",
   "repository": "https://github.com/latitudelabs/lumiere-claude-plugin",
   "license": "MIT",

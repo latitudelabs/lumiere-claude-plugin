@@ -21,10 +21,13 @@ jobs:
       - uses: actions/checkout@v7
         with:
           persist-credentials: false
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
       - uses: actions/setup-node@v6
         with:
           node-version: '24'
-      - run: python3 scripts/validate-plugin.py .
+      - run: bun scripts/validate-plugin.ts .
       - run: npx --yes @anthropic-ai/claude-code@2.1.271 plugin validate . --strict
       - run: npx --yes @anthropic-ai/claude-code@2.1.271 plugin validate .claude-plugin/plugin.json --strict
 
@@ -40,25 +43,12 @@ jobs:
       - uses: actions/checkout@v7
         with:
           persist-credentials: false
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.2
       - name: Open release PR if absent
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           RELEASE_BRANCH: ${{ github.ref_name }}
-        run: |
-          python3 - <<'PY'
-          import json, os, re, subprocess
-          from pathlib import Path
-          release = json.loads(Path('release.json').read_text())
-          version = release['version']
-          branch = os.environ['RELEASE_BRANCH']
-          if not re.fullmatch(r'release/v[0-9]+\.[0-9]+\.[0-9]+', branch) or branch != f'release/v{version}':
-              raise SystemExit('Branch does not match the plugin release version')
-          prs = json.loads(subprocess.check_output(['gh', 'pr', 'list', '--head', branch, '--base', 'main', '--state', 'all', '--json', 'url'], text=True))
-          if prs:
-              print(prs[0]['url'])
-          else:
-              body = Path(os.environ['RUNNER_TEMP']) / 'plugin-release.md'
-              body.write_text(f"## Summary\n\nPublish Lumiere {version} from source commit `{release['source_commit']}`.\n\n## Changes\n\nSee CHANGELOG.md and the file diff. This is an allowlisted distribution snapshot; no private repository history is included.\n\n## Testing\n\nPublic file boundary, release hashes, and Claude plugin validation passed. Live OAuth and research acceptance are checked separately by the release owner.\n\n## Release review\n\nReview the skill instructions, endpoint, license, and public files before merging. Merge releases this version to users of this marketplace; after official directory acceptance, Anthropic also picks up repository updates.\n")
-              subprocess.run(['gh', 'pr', 'create', '--base', 'main', '--head', branch, '--title', f'Release Lumiere {version}', '--body-file', str(body)], check=True)
-          PY
+        run: bun scripts/open-release-pr.ts
