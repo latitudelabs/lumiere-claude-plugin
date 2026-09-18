@@ -41,3 +41,7 @@ This repository is generated from Latitude's private source of truth. Maintainer
 ## License
 
 The files in this repository are licensed under MIT. This license does not cover the hosted Lumiere service, its private implementation, or workspace content.
+
+## Maintainer validation
+
+Public validation and release automation use TypeScript on Bun 1.4.2. Run `bun scripts/validate-plugin.ts .` to check the exact distribution files and hashes. Research users do not need Python or Bun installed to use the remote connector; Bun is used by the repository's maintenance workflow.

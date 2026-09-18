@@ -1,15 +1,16 @@
 {
-  "version": "1.0.0",
-  "source_commit": "8d7e6b04e64a3a4a5b5428483f723a58e1b621e4",
+  "version": "1.0.1",
+  "source_commit": "5d2db031cc6dfd86c3db9bd739d65783513002ef",
   "files": {
     ".claude-plugin/marketplace.json": "0eecf90342bd569ef06a4292239a787f77c96a964a765d9fbb3413def769b7c2",
-    ".claude-plugin/plugin.json": "b0f5423585f1c4d7b36f6ff9aa4f4752a80708410f01847b6ea8d03d15ce0f64",
-    ".github/workflows/release.yml": "bf1b12372d88a997870721b055024f19b9778845fbb8221ca7abede4ab14db5b",
+    ".claude-plugin/plugin.json": "fa23d88f0328c7c07079ee136b14a9ed55426b9195ab39214a9a51f6f26804c2",
+    ".github/workflows/release.yml": "acc14fe1c3adf42023fc086e70ad47d4802e9cf70b8d036351f3ca3162adb050",
     ".mcp.json": "9d96493788e29cce61efe68daa8d731ca45141bd2218ca293d5d6b33098c12c8",
-    "CHANGELOG.md": "bf2f987be0e6203cdf7b871bc63c8f8608a7ca33eeb2979d5702bcb307cc8e28",
+    "CHANGELOG.md": "02f8ef626ff6428953324b08eec32dee0da0d1490b94aff370f81bed7f3b8c93",
     "LICENSE": "39ad62178748ba6e39c037441de69f396f0c73804768a9768feb3742b9b04ac3",
-    "README.md": "e2a2a1a2864cbfb6723b0d1b201331824f9a0b39f8a89c22405730d718b21237",
-    "scripts/validate-plugin.py": "7661adaf316fdfff664755c4cdf9fc1985a28d41ad6c6a25054594ae7ccc2dcf",
+    "README.md": "52a79b3861b8a8b597a15efd0a5195e25f1a38e6643581262667f911af63968d",
+    "scripts/open-release-pr.ts": "6127ccd4422d7fd842f2683d8da7cfe172d0abba7acf4589e37e1d3a8c0fefcc",
+    "scripts/validate-plugin.ts": "944f7160f60f389989ed895f13124ccaeaa81215cbf1079228bb41c9d669d41a",
     "skills/lumiere-research/SKILL.md": "daea5977242249c7abcb13ad10eae4b005fd3ad6fa30cfbebb6a8ea71e62635a"
   }
 }
